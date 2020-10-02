@@ -1,25 +1,45 @@
-<p id="notice"><%= notice %></p>
+<div class="l-body">
+  <%# ヘッダー %>
+  <div class="header">
+    <%= render "shared/viewer-header"%>
+  </div>
+  <%# /ヘッダー %>
 
-<h1>Articles index</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  <%#= ヘッダー写真(付けるなら) %>
+  <%#= ヘッダー写真 %>
 
-  <tbody>
-    <% @articles.each do |article| %>
-      <tr>
-        <td><%= link_to 'Show', article %></td>
-        <td><%= link_to 'Edit', edit_article_path(article) %></td>
-        <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
 
-<br>
+  <%# メイン %>
+  <div class="home-moain">
 
-<%= link_to 'New Article', new_article_path %>
+    <%# カテゴリーリンク欄 %>
+    <div class="main-category-link-list">
+      <div class="main-category-link">
+        各カテゴリー
+      </div>
+    </div>
+    <%# カテゴリーリンク欄 %>
+
+    <%# 記事一覧 %>
+    <div class="index-article-contents-list">
+      <div class="index-article-contents">
+        各記事
+      </div>
+    </div>
+    <%# /記事一覧 %>
+
+    <%# ページネーション %>
+    <div class="pagenation">
+      ページネーション
+    </div>
+    <%# /ページネーション %>
+  </div>
+  <%# /メイン %>
+
+  <%# フッター %>
+  <div class="footer">
+    <%= render "shared/viewer-footer" %>
+  </div>
+  <%# /フッター %>
+</div>
