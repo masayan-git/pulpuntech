@@ -15,8 +15,29 @@
 
     <%# カテゴリーリンク欄 %>
     <div class="main-category-link-list">
-      <div class="main-category-link">
-        各カテゴリー
+      <div class="main-category-links">
+        <ul>
+          <%# if @categories.present? %>
+            <%# @categories.each do |category| %>
+            <li class="main-category-link">
+              <%#= category.name %>
+              <span>カテゴリー１</span>
+            </li>
+            <%# end %>
+          <%# end %>
+
+          <%# 仮のため後で消す %>
+            <li class="main-category-link">
+              <span>カテゴリー２</span>
+            </li>
+            <li class="main-category-link">
+              <span>かてごりー３</span>
+            </li>
+            <li class="main-category-link">
+              <span>カテゴリー４</span>
+            </li>
+          <%# /仮のため後で消す %>
+        </ul>
       </div>
     </div>
     <%# カテゴリーリンク欄 %>
@@ -24,7 +45,24 @@
     <%# 記事一覧 %>
     <div class="index-article-contents-list">
       <div class="index-article-contents">
-        各記事
+        <%# if @articles.present? %>
+          <%# @articles.each do |article| %>
+            <div class="index-article-image">
+              <%#= image_tag article.image %>
+              サムネイル
+            </div>
+            <div class="index-artice-content">
+              <div class="index-article-title">
+                <%#= article.title %>
+                タイトル
+              </div>
+              <div class="index-artic¥le-content-line">
+                <%#= article.content %>
+                テキストの一部が表示されます
+              </div>
+            </div>
+          <%# end %>
+        <%# end %>
       </div>
     </div>
     <%# /記事一覧 %>
