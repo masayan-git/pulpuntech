@@ -1,25 +1,7 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Masters Tops</h1>
+<h1>Masters Tops index</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @masters_tops.each do |masters_top| %>
-      <tr>
-        <td><%= link_to 'Show', masters_top %></td>
-        <td><%= link_to 'Edit', edit_masters_top_path(masters_top) %></td>
-        <td><%= link_to 'Destroy', masters_top, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
 
 <%= link_to 'New Masters Top', new_masters_top_path %>

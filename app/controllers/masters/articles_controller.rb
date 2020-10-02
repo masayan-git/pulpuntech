@@ -1,10 +1,10 @@
-class Masters::ArticlesController < ApplicationController
+class Masters::ArticlesController < Masters::ApplicationController
   before_action :set_masters_article, only: [:show, :edit, :update, :destroy]
 
   # GET /masters/articles
   # GET /masters/articles.json
   def index
-    @masters_articles = Masters::Article.all
+    @masters_articles = Article.all
   end
 
   # GET /masters/articles/1
@@ -14,7 +14,7 @@ class Masters::ArticlesController < ApplicationController
 
   # GET /masters/articles/new
   def new
-    @masters_article = Masters::Article.new
+    @masters_article = Article.new
   end
 
   # GET /masters/articles/1/edit
@@ -24,7 +24,7 @@ class Masters::ArticlesController < ApplicationController
   # POST /masters/articles
   # POST /masters/articles.json
   def create
-    @masters_article = Masters::Article.new(masters_article_params)
+    @masters_article = Article.new(masters_article_params)
 
     respond_to do |format|
       if @masters_article.save
