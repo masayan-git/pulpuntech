@@ -1,10 +1,10 @@
-class Masters::TopsController < ApplicationController
+class Masters::TopsController < Masters::ApplicationController
   before_action :set_masters_top, only: [:show, :edit, :update, :destroy]
 
   # GET /masters/tops
   # GET /masters/tops.json
   def index
-    @masters_tops = Masters::Top.all
+    
   end
 
   # GET /masters/tops/1
