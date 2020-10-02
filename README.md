@@ -1,24 +1,46 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## masters(管理者)
 
-Things you may want to cover:
+| Column   |Type    | Options     |
+| -------- |------- | ----------- |
+| name     |string  | null: false |
+| password |integer | null: false |
 
-* Ruby version
+### Association
+has_many :article
 
-* System dependencies
+## articles（記事）
 
-* Configuration
+| Column       | Type        | Options                        |
+| ------------ | ----------- | ------------------------------ |
+| title        | string      | null: false                    |
+| content      | text        | null: false                    |
+| master       | references  | null: false, foreign_key: true |
 
-* Database creation
+### Association
+belongs_to :master
+has_many :article_categories
+has_many :categories, through: :article_categories
 
-* Database initialization
+## categories(記事のタグ)
 
-* How to run the test suite
+| Column       | Type      | Options                       |
+| ------------ | --------- | ----------------------------- |
+| name         | string    | null: false, uniqueness: true |
 
-* Services (job queues, cache servers, search engines, etc.)
+### Association
+has_many :article_categories
+has_many : article, through: :article_categories
 
-* Deployment instructions
+## article_categories(中間テーブル)
 
-* ...
+| Column   | Type       | Options                        |
+| -------- | ---------  | -----------------------------  |
+| article  | references | null: false, foreign_key: true |
+| category      | references | null: false, foreign_key: true |
+
+### Association
+belongs_to : article
+belongs_to : category
+
