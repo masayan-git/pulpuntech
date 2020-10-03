@@ -3,12 +3,12 @@ let showContents = function() {
   const articleContents = document.querySelectorAll(".index-article-contents");
   
   categoryLinks.forEach(function(category){
-    category.addEventListener("click", (e)=> {
+    category.addEventListener("click", (e)=>{
       articleContents.forEach(function(content){
         if (category.dataset.num === content.dataset.num){
-          content.setAttribute("style", "display: flex");
+          content.setAttribute("style", "display: flex;");
         }else{
-          content.setAttribute("style", "display: none");
+          content.setAttribute("style", "display: none;");
         }
       });
     });
