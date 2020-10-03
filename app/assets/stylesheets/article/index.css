@@ -27,6 +27,10 @@
   background-color: #ffdacc;
   color: lightgray;
 }
+
+/* カテゴリー選択後 */
+
+/* /カテゴリー選択後 */
 /* /カテゴリー */
 
 /* 記事一覧 */
@@ -42,7 +46,12 @@
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
+.view-second-category, .view-third-category{
+  display: none;
+}
 /* /全体 */
+
 /* 各記事 */
 .index-article{
   width: 300px;
@@ -90,6 +99,7 @@
 /* /各記事 */
 /* /記事一覧 */
  
+/* ページネーション */
 .pagination{
   width: 500px;
   text-align: center;
@@ -97,3 +107,4 @@
   margin-top: 20px;
   margin-bottom: 20px;
 }
+/* /ページネーション */
