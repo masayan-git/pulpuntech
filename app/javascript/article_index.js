@@ -14,4 +14,4 @@ let showContents = function() {
     });
   });
 }
-window.addEventListener("load", showContents);
+window.addEventListener("turbolinks:load", showContents);
