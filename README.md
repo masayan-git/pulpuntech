@@ -4,11 +4,12 @@
 未経験からエンジニアになりたい人向けのブログです。
 
 ## 発案者
-[masayan-git](https://github.com/masayan-git/ "masayan-git")
-## メンバー
-[toramuryo796](https://github.com/toramuryo796/ "toramuryo796")
+[masayan-git](https://github.com/masayan-git/ "masayan-git") バックエンド担当
 
-[mztnktm43](https://github.com/mztnktm43/ "mztnktm43")
+## メンバー
+[toramuryo796](https://github.com/toramuryo796/ "toramuryo796") フロントエンド担当
+
+[mztnktm43](https://github.com/mztnktm43/ "mztnktm43") フロントエンド担当
 
 発案者とメンバーはテックキャンプで共に学習した仲間です！
 
