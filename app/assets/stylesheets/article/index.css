@@ -44,7 +44,8 @@
 .index-article-contents{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  position: relative;
+  left: 20px;
 }
 
 #view-second-category, #view-third-category{
@@ -56,6 +57,7 @@
 .index-article{
   width: 300px;
   margin-top: 20px;
+  margin-right: 20px;
   border:1px solid black;
   padding: 5px;
   background-color: white;
