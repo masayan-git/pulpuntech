@@ -19,7 +19,7 @@
         <ul>
           <%# if @categories.present? %>
             <%# @categories.each do |category| %>
-            <li class="main-category-link">
+            <li class="main-category-link" id="category-link-1" data-num="1">
               <%#= category.name %>
               <span>カテゴリー１</span>
             </li>
@@ -27,13 +27,13 @@
           <%# end %>
 
           <%# 仮のため後で消す %>
-            <li class="main-category-link">
+            <li class="main-category-link" id="category-link-2" data-num= "2">
               <span>カテゴリー２</span>
             </li>
-            <li class="main-category-link">
+            <li class="main-category-link" id="category-link-3" data-num="3">
               <span>かてごりー３</span>
             </li>
-            <li class="main-category-link">
+            <li class="main-category-link" id="category-link-4" data-num="4">
               <span>カテゴリー４</span>
             </li>
           <%# /仮のため後で消す %>
@@ -44,99 +44,97 @@
 
     <%# 記事一覧 %>
     <div class="index-article-contents-list">
-      <div class="index-article-contents">
+      <div class="index-article-contents view-first-category" data-num="1">
         <%# if @articles.present? %>
-          <div class="view-first-category">
-            <%# @articles.each do |article| %>
-              <div class="index-article">
-                <div class="index-article-image">
-                  <%#= image_tag article.image %>
-                  サムネイル
-                  <div class="index-article-image-category">
-                    <%#= article.category.name %>
-                    <span>カテゴリー名</span>
-                  </div>                
+          <%# @articles.each do |article| %>
+            <div class="index-article">
+              <div class="index-article-image">
+                <%#= image_tag article.image %>
+                サムネイル
+                <div class="index-article-image-category">
+                  <%#= article.category.name %>
+                  <span>カテゴリー名</span>
+                </div>                
+              </div>
+              <div class="index-article-content">
+                <div class="index-article-title">
+                  <%#= article.title %>
+                  <span>タイトル1</span>
                 </div>
-                <div class="index-article-content">
-                  <div class="index-article-title">
-                    <%#= article.title %>
-                    <span>タイトル1</span>
-                  </div>
-                  <div class="index-article-content-line">
-                    <%#= article.content %>
-                    テキストの一部が表示されます
-                  </div>
+                <div class="index-article-content-line">
+                  <%#= article.content %>
+                  テキストの一部が表示されます
                 </div>
               </div>
+            </div>
 
-              <%# 仮のためあとで消す %>
-              <div class="index-article">
-                <div class="index-article-image">
-                  <%#= image_tag article.image %>
-                  サムネイル
-                  <div class="index-article-image-category">
-                    <span>カテゴリー名</span>
-                  </div>
-                </div>
-                <div class="index-article-content">
-                  <div class="index-article-title">
-                    <%#= article.title %>
-                    タイトル2
-                  </div>
-                  <div class="index-article-content-line">
-                    <%#= article.content %>
-                    テキストの一部が表示されます。はみ出た部分は表示しない
-                  </div>
+            <%# 仮のためあとで消す %>
+            <div class="index-article">
+              <div class="index-article-image">
+                <%#= image_tag article.image %>
+                サムネイル
+                <div class="index-article-image-category">
+                  <span>カテゴリー名</span>
                 </div>
               </div>
-
-              <div class="index-article">
-                <div class="index-article-image">
-                  <%#= image_tag article.image %>
-                  サムネイル
-                  <div class="index-article-image-category">
-                    <span>カテゴリー名</span>
-                  </div>                
+              <div class="index-article-content">
+                <div class="index-article-title">
+                  <%#= article.title %>
+                  タイトル2
                 </div>
-                <div class="index-article-content">
-                  <div class="index-article-title">
-                    <%#= article.title %>
-                    タイトル3
-                  </div>
-                  <div class="index-article-content-line">
-                    <%#= article.content %>
-                    テキストの一部が表示されます
-                  </div>
+                <div class="index-article-content-line">
+                  <%#= article.content %>
+                  テキストの一部が表示されます。はみ出た部分は表示しない
                 </div>
               </div>
+            </div>
 
-
-              <div class="index-article">
-                <div class="index-article-image">
-                  <%#= image_tag article.image %>
-                  サムネイル
-                  <div class="index-article-image-category">
-                    <span>カテゴリー名</span>
-                  </div>                
+            <div class="index-article">
+              <div class="index-article-image">
+                <%#= image_tag article.image %>
+                サムネイル
+                <div class="index-article-image-category">
+                  <span>カテゴリー名</span>
+                </div>                
+              </div>
+              <div class="index-article-content">
+                <div class="index-article-title">
+                  <%#= article.title %>
+                  タイトル3
                 </div>
-                <div class="index-article-content">
-                  <div class="index-article-title">
-                    <%#= article.title %>
-                    タイトル4
-                  </div>
-                  <div class="index-article-content-line">
-                    <%#= article.content %>
-                    テキストの一部が表示されます
-                  </div>
+                <div class="index-article-content-line">
+                  <%#= article.content %>
+                  テキストの一部が表示されます
                 </div>
-              </div>            
-              <%# /仮のためあとで消す %>
+              </div>
+            </div>
 
-            <%# end %>
-          </div>
+
+            <div class="index-article">
+              <div class="index-article-image">
+                <%#= image_tag article.image %>
+                サムネイル
+                <div class="index-article-image-category">
+                  <span>カテゴリー名</span>
+                </div>                
+              </div>
+              <div class="index-article-content">
+                <div class="index-article-title">
+                  <%#= article.title %>
+                  タイトル4
+                </div>
+                <div class="index-article-content-line">
+                  <%#= article.content %>
+                  テキストの一部が表示されます
+                </div>
+              </div>
+            </div>            
+            <%# /仮のためあとで消す %>
+
+          <%# end %>
         <%# end %>
-        <%= render "shared/category" %>
       </div>
+      <%= render "shared/category" %>
     </div>
     <%# /記事一覧 %>
 
