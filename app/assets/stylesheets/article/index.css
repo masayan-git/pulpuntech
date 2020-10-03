@@ -1,0 +1,99 @@
+/* 全体 */
+.article-index-main{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: ivory;
+}
+/* /全体 */
+
+/* カテゴリー */
+.main-category-links ul{
+  margin: 0 auto;
+  width: 600px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.main-category-link{
+  padding: 10px;
+  border: 1px solid black;
+  background-color: coral;
+  color: white;
+  font-weight: 600;
+}
+
+.main-category-link:hover{
+  background-color: #ffdacc;
+  color: lightgray;
+}
+/* /カテゴリー */
+
+/* 記事一覧 */
+/* 全体 */
+.index-article-contents-list{
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.index-article-contents{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+/* /全体 */
+/* 各記事 */
+.index-article{
+  width: 300px;
+  margin-top: 20px;
+  border:1px solid black;
+  padding: 5px;
+  background-color: white;
+}
+
+.index-article:hover{
+  box-shadow: 0 15px 30px -5px rgba(0,0,0,.15), 0 0 5px rgba(0,0,0,.1);
+  transform: translateY(-4px);
+}
+
+
+.index-article-image{
+  width: 100%;
+  height: 250px;
+  background-color: gray;
+  color: white;
+  position: relative;
+}
+
+.index-article-image-category{
+  position: absolute;
+  top: 0px;
+  right: 5px;
+  color:white;
+}
+
+.index-article-content{
+  padding: 5px;
+}
+
+.index-article-title{
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.index-article-content-line{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+/* /各記事 */
+/* /記事一覧 */
+ 
+.pagination{
+  width: 500px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
