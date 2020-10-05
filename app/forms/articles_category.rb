@@ -6,7 +6,7 @@ class ArticlesCategory
     article = Article.create!(title: title, content: content, master_id: master_id)
     # binding.pry
     category_ids.each do |c|
-      ArticleCategory.create!(article_id: article.id, categories_id: c)
+      ArticleCategory.create!(article_id: article.id, category_id: c)
     end
   end
 end
