@@ -1,7 +1,7 @@
 /* 全体 */
 .article-index-main{
-  margin-top: 10px;
-  margin-bottom: 10px;
+  padding-top: 20px;
+  padding-bottom: 10px;
   background-color: ivory;
 }
 /* /全体 */
@@ -44,10 +44,11 @@
 .index-article-contents{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  position: relative;
+  left: 20px;
 }
 
-.view-second-category, .view-third-category{
+#view-second-category, #view-third-category{
   display: none;
 }
 /* /全体 */
@@ -56,6 +57,7 @@
 .index-article{
   width: 300px;
   margin-top: 20px;
+  margin-right: 20px;
   border:1px solid black;
   padding: 5px;
   background-color: white;

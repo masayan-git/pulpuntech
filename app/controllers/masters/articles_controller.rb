@@ -15,10 +15,14 @@ class Masters::ArticlesController < Masters::ApplicationController
   # GET /masters/articles/new
   def new
     @masters_article = Article.new
+    @category = Category.all
   end
 
   # GET /masters/articles/1/edit
   def edit
+    @category = Category.all
+    @article_categories = @masters_article.categories
+    @categories = @article_categories.index_by(&:id)
   end
 
   # POST /masters/articles
@@ -28,7 +32,7 @@ class Masters::ArticlesController < Masters::ApplicationController
 
     respond_to do |format|
       if @masters_article.save
-        format.html { redirect_to @masters_article, notice: 'Article was successfully created.' }
+        format.html { redirect_to masters_articles_path, notice: 'Article was successfully created.' }
         format.json { render :show, status: :created, location: @masters_article }
       else
         format.html { render :new }
@@ -42,7 +46,7 @@ class Masters::ArticlesController < Masters::ApplicationController
   def update
     respond_to do |format|
       if @masters_article.update(masters_article_params)
-        format.html { redirect_to @masters_article, notice: 'Article was successfully updated.' }
+        format.html { redirect_to [:masters,@masters_article], notice: 'Article was successfully updated.' }
         format.json { render :show, status: :ok, location: @masters_article }
       else
         format.html { render :edit }
@@ -64,11 +68,12 @@ class Masters::ArticlesController < Masters::ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_masters_article
-      @masters_article = Masters::Article.find(params[:id])
+      @masters_article = Article.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
     def masters_article_params
-      params.fetch(:masters_article, {})
+      # binding.pry
+      params.require(:article).permit(:title, :content,{category_ids: []}).merge(master_id: current_master.id)
     end
 end

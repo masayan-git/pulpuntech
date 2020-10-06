@@ -1,17 +1,39 @@
-<%= form_with(model: masters_article, local: true) do |form| %>
+<%= form_with model: [:masters,masters_article],  local: true do |form| %>
   <% if masters_article.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(masters_article.errors.count, "error") %> prohibited this masters_article from being saved:</h2>
+      <h2><%= pluralize(masters_article.errors.count, "つのエラーがあります。") %> </h2>
 
-      <ul>
+      <!--ul>
         <% masters_article.errors.full_messages.each do |message| %>
           <li><%= message %></li>
         <% end %>
-      </ul>
+      </ul-->
     </div>
   <% end %>
 
   <div class="actions">
-    <%= form.submit %>
+    <p>タイトル</p>
+    <% if masters_article.errors.include?(:title) %>
+      <p style="color: red;"><%= masters_article.errors.full_messages_for(:title).first %></p>
+    <% end %>
+    <%= form.text_field :title %>
+      
+    
+    <p><%= form.label :content %></p>
+    <% if masters_article.errors.include?(:content) %>
+      <p style="color: red;"><%= masters_article.errors.full_messages_for(:content).first %></p>
+    <% end %>
+    <%= form.rich_text_area :content %>
+    
+    <% if masters_article.errors.include?(:article_category_ids) %>
+      <p style="color: red;"><%= masters_article.errors.full_messages_for(:article_category_ids).first %></p>
+    <% end %>
+    <%= form.collection_check_boxes(:category_ids, Category.all, :id, :name, checked: @categries, include_hidden: false) do |category| %>
+      <%= category.label do %>
+        <%= category.check_box %>
+        <%= category.text %>
+      <% end %>
+    <% end %>
+    <%= form.submit  '投稿する' %>
   </div>
 <% end %>
