@@ -1,0 +1,59 @@
+/* ここからfooter */
+.footer {
+  height:200px;
+  width:100%;
+  background-color: lightblue;
+  display: flex;
+}
+
+.about-us {
+  height:90%;
+  width:30%;
+  color:white;
+  margin: 10px;
+  display:flex;
+  flex-direction: column;
+}
+.blog-name-footer {
+  font-size: 25px;
+  height:20%;
+  color: white;
+}
+
+.about {
+  height: 80%;
+  width:100%;
+  border:1px solid white;
+}
+
+.member-links-list {
+  border: 1px solid white;
+  height:90%;
+  width: 40%;
+  margin:10px;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.member-link {
+  list-style: none;
+  color:white;
+  display:flex;
+}
+
+.member-image {
+  border:1px solid white;
+}
+
+.member-introduce {
+  margin-left: px;
+}
+
+.footer-cm {
+  height: 90%;
+  width: 30%;
+  border: 1px solid white;
+  color:white;
+  margin: 10px;
+}

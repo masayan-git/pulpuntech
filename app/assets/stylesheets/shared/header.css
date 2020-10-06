@@ -1,0 +1,42 @@
+/* ここからheader */
+.header {
+  height: 100px;
+  width:100%;
+  display: flex;
+  background-color: lightgray;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+}
+
+.blog-name {
+  color: white;
+  font-size: 30px;
+}
+
+.header-right {
+  width: 70%;
+  height:100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.header-category-links-list {
+  color: white;
+  list-style: none;
+  display: flex;
+  align-items: flex-start;
+}
+
+.header-category-link {
+  text-decoration: none;
+  margin-left: 25px;
+}
+
+.header-search {
+  color: white;
+  text-decoration: none;
+  margin: 1em 25px;
+}
+
