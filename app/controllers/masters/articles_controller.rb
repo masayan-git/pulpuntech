@@ -14,7 +14,7 @@ class Masters::ArticlesController < Masters::ApplicationController
 
   # GET /masters/articles/new
   def new
-    @masters_article = ArticlesCategory.new
+    @masters_article = Article.new
     @category = Category.all
   end
 
@@ -28,7 +28,7 @@ class Masters::ArticlesController < Masters::ApplicationController
   # POST /masters/articles
   # POST /masters/articles.json
   def create
-    @masters_article = ArticlesCategory.new(masters_article_params)
+    @masters_article = Article.new(masters_article_params)
 
     respond_to do |format|
       if @masters_article.save
