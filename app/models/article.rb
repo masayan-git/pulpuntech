@@ -1,5 +1,5 @@
 class Article < ApplicationRecord
-  has_many_attached :image
+  has_many_attached :image, dependent: :delete_all
   has_rich_text :content
   has_many :article_categories, dependent: :delete_all
   has_many :categories, through: :article_categories
