@@ -23,7 +23,7 @@
     <% if masters_article.errors.include?(:content) %>
       <p style="color: red;"><%= masters_article.errors.full_messages_for(:content).first %></p>
     <% end %>
-    <%= form.rich_text_area :content %>
+    <%= form.text_area :content, id:"summernote"%>
     
     <% if masters_article.errors.include?(:article_category_ids) %>
       <p style="color: red;"><%= masters_article.errors.full_messages_for(:article_category_ids).first %></p>
@@ -34,6 +34,20 @@
         <%= category.text %>
       <% end %>
     <% end %>
-    <%= form.submit  '投稿する' %>
+    
+    <p><%= form.submit  '投稿する' %></P>
   </div>
 <% end %>
+
+
+<script>
+  $(document).ready(function() {
+      $('#summernote').summernote();
+  });
+  $('#summernote').summernote({
+    height: 300,                 // set editor height
+    minHeight: null,             // set minimum height of editor
+    maxHeight: null,             // set maximum height of editor
+    focus: true                  // set focus to editable area after initializing summernote
+  });
+</script>
