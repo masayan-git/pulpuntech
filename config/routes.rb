@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   
   root to: 'articles#index'
   resources :articles
+  resources :members
 
   devise_for :masters, controllers: {
     sessions:        'masters/sessions',
