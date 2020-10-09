@@ -64,7 +64,7 @@ class ArticlesController < ApplicationController
   end
 
   def search
-    @articles = article.search(params[:key_word])
+    @articles = SearchArticlesService.search(params[:key_word])
   end
 
   private

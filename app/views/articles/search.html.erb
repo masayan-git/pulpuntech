@@ -9,6 +9,57 @@
   <%#= ヘッダー写真(付けるなら) %>
   <%#= ヘッダー写真 %>
 
+  <%# メイン %>
+  <div class="search-result">
+    <div class="search-article-list">
+      <% @articles.each do |article| %>
+        <% link_to article_path(article) do %>
+          <div class="index-article">
+            <div class="index-article-image">
+              <%#= image_tag article.image %>
+              サムネイル
+              <div class="index-article-image-category">
+                <%= article.category.name %>
+                <span>カテゴリー名</span>
+              </div>                
+            </div>
+            <div class="index-article-content">
+              <div class="index-article-title">
+                <%= article.title %>
+                <span>タイトル1</span>
+              </div>
+              <div class="index-article-content-line">
+                <%= article.content %>
+                テキストの一部が表示されます
+              </div>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+
+      <%# あとで消す %>
+      <div class="index-article">
+        <div class="index-article-image">
+          サムネイル
+          <div class="index-article-image-category">
+            <span>カテゴリー名</span>
+          </div>                
+        </div>
+        <div class="index-article-content">
+          <div class="index-article-title">
+            <span>タイトル1</span>
+          </div>
+          <div class="index-article-content-line">
+            テキストの一部が表示されます
+          </div>
+        </div>
+      </div>
+      <%# /あとで消す %>
+
+    </div>
+  </div>
+  <%# /メイン %>
+
   <%# フッター %>
   <div class="footer">
     <%= render "shared/viewer-footer" %>
