@@ -61,19 +61,20 @@ class ArticlesController < ApplicationController
       format.html { redirect_to articles_url, notice: 'Article was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
 
   def search
     @articles = article.search(params[:key_word])
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_article
-      @article = Article.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_article
+    @article = Article.find(params[:id])
+  end
 
-    # Only allow a list of trusted parameters through.
-    def article_params
-      params.fetch(:article, {})
-    end
+  # Only allow a list of trusted parameters through.
+  def article_params
+    params.fetch(:article, {})
+  end
 end
