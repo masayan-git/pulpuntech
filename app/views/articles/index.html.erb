@@ -17,26 +17,17 @@
     <div class="main-category-link-list">
       <div class="main-category-links">
         <ul>
-          <%# if @categories.present? %>
-            <%# @categories.each do |category| %>
-            <li class="main-category-link" id="category-link-1" data-num="1">
-              <%#= category.name %>
-              <span>カテゴリー１</span>
-            </li>
-            <%# end %>
-          <%# end %>
-
-          <%# 仮のため後で消す %>
-            <li class="main-category-link" id="category-link-2" data-num= "2">
-              <span>カテゴリー２</span>
-            </li>
-            <li class="main-category-link" id="category-link-3" data-num="3">
-              <span>かてごりー３</span>
-            </li>
-            <li class="main-category-link" id="category-link-4" data-num="4">
-              <span>カテゴリー４</span>
-            </li>
-          <%# /仮のため後で消す %>
+          <li class="main-category-link" id="category-link-1" data-num="1">
+            全て
+          </li>
+          <% if @categories.present? %>
+            <% @categories.each do |category| %>
+              <li class="main-category-link" id="category-link-1" data-num="<%= @num %>">
+                <%= category.name %>
+              </li>
+              <% @num += 1 %>
+            <% end %>
+          <% end %>
         </ul>
       </div>
     </div>
