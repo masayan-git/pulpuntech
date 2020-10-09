@@ -1,16 +1,17 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :update, :destroy]
+  before_action :find_writer, only: :show
 
   # GET /articles
   # GET /articles.json
   def index
     @articles = Article.all.page(params[:page]).per(9)
   end
-
+  
   # GET /articles/1
   # GET /articles/1.json
   def show
-    @article = Article.find(params[:id])
+    @writer = @article.writer
   end
 
   # GET /articles/new
@@ -60,6 +61,9 @@ class ArticlesController < ApplicationController
       format.html { redirect_to articles_url, notice: 'Article was successfully destroyed.' }
       format.json { head :no_content }
     end
+
+  def search
+    @articles = article.search(params[:key_word])
   end
 
   private
