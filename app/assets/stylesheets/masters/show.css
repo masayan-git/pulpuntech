@@ -1,0 +1,145 @@
+
+/* ここから */
+.masters-show {
+  display: flex;
+}
+
+.masters-show-main {
+  width: 70vw;
+  height: 100%;
+  background-color: white;
+  border: 3px solid skyblue;
+  margin:3px;
+  justify-content: center;
+  padding:10px 0;
+}
+
+.profile-title {
+  border: 1px solid red;
+  height: 10%;
+  padding: 15px 30px;
+  margin: 5px 70px;
+  text-align: center;
+}
+
+.profile {
+  justify-content: space-around;
+  display: flex;
+  align-items: center;
+  height: 15%;
+  padding: 10px 45px;
+  margin:5px 70px;
+  border: 1px solid green;
+}
+
+.profile-image {
+  border: 1px solid red;
+  height: 50px;
+  width: 50px;
+  padding: 5px;
+}
+
+.profile-name {
+  text-align: left;
+  border: 1px solid red;
+}
+
+.profile-content {
+  height:15%;
+  padding: 5px;
+  margin: 5px 70px;
+  border: 1px solid blue;
+}
+
+.profile-add {
+ display: flex;
+ height: 55px;
+ margin: 5px 70px;
+ padding: 5px;
+ border: 1px solid green;
+}
+
+.profile-sns {
+  margin-right: 10px;
+  height:45px;
+  width:45px;
+  border: 1px solid red;
+}
+
+.portfolio {
+  width:80%;
+  border: 1px solid red;
+}
+
+/* 記事一覧 */
+/* 全体 */
+.index-article-contents-list{
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.index-article-contents{
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  left: 20px;
+}
+
+#view-second-category, #view-third-category{
+  display: none;
+}
+/* /全体 */
+
+/* 各記事 */
+.index-article{
+  width: 300px;
+  margin-top: 20px;
+  margin-right: 20px;
+  border:1px solid black;
+  padding: 5px;
+  background-color: white;
+}
+
+.index-article:hover{
+  box-shadow: 0 15px 30px -5px rgba(0,0,0,.15), 0 0 5px rgba(0,0,0,.1);
+  transform: translateY(-4px);
+}
+
+
+.index-article-image{
+  width: 100%;
+  height: 250px;
+  background-color: gray;
+  color: white;
+  position: relative;
+}
+
+.index-article-image-category{
+  position: absolute;
+  top: 0px;
+  right: 5px;
+  color:white;
+}
+
+.index-article-content{
+  padding: 5px;
+}
+
+.index-article-title{
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.index-article-content-line{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+/* /各記事 */
+/* /記事一覧 */
+
+
+
+
+/* ここまで */

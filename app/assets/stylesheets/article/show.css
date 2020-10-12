@@ -1,11 +1,12 @@
 .article-show {
   display: flex;
+  justify-content: center;
 }
 .article-main {
-  width: 70vw;
+  width: 55vw;
   background-color: white;
   border: 3px solid skyblue;
-  margin:3px;
+  margin:3px 50px 3px 3px;
   justify-content: center;
 }
 
@@ -57,8 +58,8 @@
 
 
 /* ここはサイドバー */
-.article-sidebar {
-  width: 30%;
+.article-side-bar {
+  width: 25vw;
   border:3px solid skyblue;
   background-color: white;
   margin: 3px 3px 3px 7px;

@@ -1,5 +1,10 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :update, :destroy]
+<<<<<<< Updated upstream
+=======
+  # before_action :find_writer, only: :show
+  before_action :category_all, only: [:index, :show]
+>>>>>>> Stashed changes
 
   # GET /articles
   # GET /articles.json
@@ -10,7 +15,11 @@ class ArticlesController < ApplicationController
   # GET /articles/1
   # GET /articles/1.json
   def show
+<<<<<<< Updated upstream
     @article = Article.find(params[:id])
+=======
+    # @writer = @article.writer
+>>>>>>> Stashed changes
   end
 
   # GET /articles/new

@@ -1,0 +1,45 @@
+<div class="side-content writer-box">
+  <%# ライター紹介 %>
+  <div class="side-members">
+    <div class="side-members-list">
+      <%# <% @members.each do |member| %>
+        <%# if member == @article.memebr %>
+          <%#= image_tag @article.image %>
+          <%#= link_to @article.member.name member_path(member) %>
+        <%# else %>
+          <%#= link_to member.name member_path(member) %>
+        <%# end %>
+      <%# end %> 
+      members
+    </div>
+  </div>
+  <%# /ライター紹介 %>
+
+  <%# もくじ %>
+  <% if @article.present? %>
+    <div class="side-table-contents">
+    目次
+    </div>
+  <% end %>
+  <%# /もくじ %>
+
+  <%# カテゴリー一覧 %> 
+  <div class="side-category-list">  
+    <div class="category-title">  
+      タイトル一覧
+    </div>
+    <ul>
+      <% @categories.each do |category| %>
+        <li><%= category.name %></li>
+      <% end %>
+      <li>カテゴリー</li>
+    </ul>
+  </div>
+  <%# /カテゴリー一覧 %>
+
+  <%# 広告 %>
+  <div class="cm-box">
+    広告
+  </div>
+  <%# /広告 %>
+</div>
