@@ -22,5 +22,6 @@ class MembersController < ApplicationController
 
   private
   def member_params
-    params.require(:member).permit(:name, :infomation, :portfolio).merge(master_id: current_user.id, article_id: params[:article_id])
+    params.require(:member).permit(:name, :infomation, :portfolio).merge(master_id: current_master.id, article_id: params[:article_id])
+  end
 end
