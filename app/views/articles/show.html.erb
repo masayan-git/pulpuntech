@@ -1,4 +1,62 @@
 <p id="notice"><%= notice %></p>
+<div class="l-body">
+  <%# ヘッダー %>
+  <div class="header">
+    <%= render "shared/viewer-header"%>
+  </div>
+  <%# /ヘッダー %>
 
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', articles_path %>
+  <div class="article-show">
+    <div class="article-main">
+      <ul class="articles-tags-list">
+        <%# <%= @tags.each do |tag| %>
+        <li class="article-tag">#tag1</li>
+        <li class="article-tag">#tag2</li>
+      </ul>
+
+      <div class="article-head">
+        <div class="article-title">
+          title<%# <%= @articles.title タイトルを表示させる%>
+        </div>
+
+        <div class="article-head-right">
+          master<div class="article-writer">
+            <%# <%= @master.id 記事を書いたmasterを表示させる%>
+          </div>
+
+          <div class="article-date">
+          date<%# <%= @articles.update 書いた日付を表示させる%>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-image">
+        image<%# <%= @article.image サムネイル画像の表示%>
+      </div>
+
+      <div class="table-content">
+      mokuji
+      </div>
+
+      <div class="article-content">
+        blog<%# <%= @articles.content ブログ本文を表示させる%>
+      </div>
+
+    </div>
+  </div>
+
+  <%= link_to 'Back', articles_path %>
+
+
+  <div class="article-side-bar">
+    <%= render "#サイドバーのファイル"%>
+  </div>
+
+  <%# フッター %>
+  <div class="footer">
+    <%= render "shared/viewer-footer" %>
+  </div>
+  <%# /フッター %>
+</div>
+
+

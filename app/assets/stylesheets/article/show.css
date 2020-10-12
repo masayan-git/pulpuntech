@@ -1,0 +1,65 @@
+.article-show {
+  display: flex;
+}
+.article-main {
+  width: 70vw;
+  background-color: white;
+  border: 3px solid skyblue;
+  margin:3px;
+  justify-content: center;
+}
+
+.articles-tags-list {
+  list-style: none;
+  display:flex;
+  padding:0px;
+  margin:0px;
+}
+
+.article-tag {
+  font-size: 15px;
+}
+
+.article-head {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 2px solid lightgray;
+  margin: 7px;
+}
+
+.article-title {
+  font-size:45px;
+}
+
+.article-head-right {
+}
+
+.article-writer {
+}
+
+.article-date{
+}
+
+.article-image {
+  margin:15px;
+  border:2px solid skyblue;
+  width:60vw;
+  height:30vh;
+}
+
+.table-content {
+}
+
+.article-content {
+}
+
+
+/* ここはサイドバー */
+.article-sidebar {
+  width: 30%;
+  border:3px solid skyblue;
+  background-color: white;
+  margin: 3px 3px 3px 7px;
+}
