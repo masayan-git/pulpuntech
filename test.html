@@ -22,3 +22,10 @@
     </script>
   </body>
 </html>
+
+
+      t.string         :name,           null: false
+      t.text           :infomation,     null: false
+      t.text           :portfolio,      null: false
+      t.references     :master,         null: false, foreign_key: true
+      t.references     :article,        null: false, foreign_key: true
