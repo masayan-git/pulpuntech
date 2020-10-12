@@ -1,0 +1,45 @@
+<div class="l-body">
+  <%# ヘッダー %>
+  <div class="header">
+    <%= render "shared/viewer-header"%>
+  </div>
+  <%# /ヘッダー %>
+
+
+  <%#= ヘッダー写真(付けるなら) %>
+  <%#= ヘッダー写真 %>
+
+  <%# メイン %>
+  <div class="search-result">
+    <div class="search-article-list">
+      <%= render partial: "shared/article_list", locals: {articles: @articles} %>    
+
+      <%# あとで消す %>
+      <div class="index-article">
+        <div class="index-article-image">
+          サムネイル
+          <div class="index-article-image-category">
+            <span>カテゴリー名</span>
+          </div>                
+        </div>
+        <div class="index-article-content">
+          <div class="index-article-title">
+            <span>タイトル1</span>
+          </div>
+          <div class="index-article-content-line">
+            テキストの一部が表示されます
+          </div>
+        </div>
+      </div>
+      <%# /あとで消す %>
+
+    </div>
+  </div>
+  <%# /メイン %>
+
+  <%# フッター %>
+  <div class="footer">
+    <%= render "shared/viewer-footer" %>
+  </div>
+  <%# /フッター %>
+</div>

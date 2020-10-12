@@ -6,7 +6,11 @@ Rails.application.routes.draw do
   
   
   root to: 'articles#index'
-  resources :articles
+  resources :articles, only: [:index, :show] do
+    collection do
+      get 'search'
+    end
+  end
   resources :members
 
   devise_for :masters, controllers: {

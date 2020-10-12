@@ -1,7 +1,6 @@
 /* ここからheader */
 .header {
   height: 100px;
-  width:100%;
   display: flex;
   background-color: lightgray;
   align-items: center;

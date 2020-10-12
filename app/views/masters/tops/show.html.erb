@@ -1,4 +1,97 @@
 <p id="notice"><%= notice %></p>
 
+
+    <div class="l-body">
+        <!-- ヘッダー -->
+      <div class="header">
+        <%= render "shared/viewer-header"%>
+      </div>
+
+
+        <!-- メイン側 -->
+      <div class="masters-show">
+        <div class="masters-show-main">
+
+          <div class="profile-title">
+            管理者紹介ページ
+          </div>
+
+          <div class="profile">
+            <div class="profile-image">
+              picture
+            </div>
+            <div class="profile-name">
+            master's name
+            <%# <%= earchでmasterの名前表示%>
+            </div>
+          </div>
+
+          <div class="profile-content">
+            comment of per member
+          </div>
+          <div class="profile-add">
+            <div class="profile-sns">
+              SNS each
+            <!-- eachでSNSの数だけ出す？ -->
+            </div>
+            <div class="portfolio">
+              ポートフォリオのURL
+            </div>
+          </div>
+
+            <!-- <%# 記事一覧 %> -->
+            <!-- 一覧で表示されるのは個人の一覧 -->
+            <div class="index-article-contents-list">
+              <div class="index-article-contents view-first-category" data-num="1">
+                <!-- <% if @articles.present? %> -->
+                  <!-- <% @articles.each do |article| %> -->
+                    <!-- <% link_to article_path(article) do %> -->
+                      <div class="index-article">
+                        <div class="index-article-image">
+                          <!-- <%#= image_tag article.image %> -->
+                          サムネイル
+                          <div class="index-article-image-category">
+                            <!-- <%#= article.category.name %> -->
+                            <span>カテゴリー名</span>
+                          </div>                
+                        </div>
+                        <div class="index-article-content">
+                          <div class="index-article-title">
+                            <!-- <%= article.title %> -->
+                            <span>タイトル1</span>
+                          </div>
+                          <div class="index-article-content-line">
+                            <!-- <%= article.content %> -->
+                            テキストの一部が表示されます
+                          </div>
+                        </div>
+                      </div>
+                    <!-- <% end %>
+                  <% end %>
+                <% end %> -->
+                    
+                <!-- <%# 仮のためあとで消す %>
+                <%= render "shared/category_sample" %>
+                <%# 仮のためあとで消す %> -->
+                
+              </div>
+              <!-- <%= render "shared/category" %> -->
+            </div>
+            <!-- <%# /記事一覧 %> -->
+          
+        </div>
+
+          <!-- サイドバー -->
+        <div class="article-sidebar">
+            <%= render "shared/viewer-side_bar"%>
+        </div>
+      </div>
+
+        <!-- フッター -->
+      <div class="footer">
+        <%= render "shared/viewer-footer"%>
+      </div>    
+    </div>
+
 <%= link_to 'Edit', edit_masters_top_path(@masters_top) %> |
 <%= link_to 'Back', masters_tops_path %>
