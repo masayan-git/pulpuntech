@@ -2,14 +2,17 @@
   <%# ライター紹介 %>
   <div class="side-members">
     <div class="side-members-list">
-      <% @members.each do |member| %>
-        <% if member == @article.memebr %>
-          <%= image_tag @article.image %>
-          <%= link_to @article.member.name member_path(member) %>
-        <% else %>
-          <%= link_to member.name member_path(member) %>
-        <% end %>
-      <% end %>
+
+      <%# <% @members.each do |member| %>
+        <%# if member == @article.memebr %>
+          <%#= image_tag @article.image %>
+          <%#= link_to @article.member.name member_path(member) %>
+        <%# else %>
+          <%#= link_to member.name member_path(member) %>
+        <%# end %>
+      <%# end %> 
+      members
+
     </div>
   </div>
   <%# /ライター紹介 %>

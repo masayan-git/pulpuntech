@@ -1,6 +1,7 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :update, :destroy]
-  before_action :find_writer, only: :show
+
+  # before_action :find_writer, only: :show
   before_action :category_all, only: [:index, :show]
 
   # GET /articles
@@ -13,7 +14,10 @@ class ArticlesController < ApplicationController
   # GET /articles/1
   # GET /articles/1.json
   def show
-    @writer = @article.writer
+
+    @article = Article.find(params[:id])
+    # @writer = @article.writer
+
   end
   
   # GET /articles/new

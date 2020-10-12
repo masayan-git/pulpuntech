@@ -42,15 +42,15 @@
         blog<%# <%= @articles.content ブログ本文を表示させる%>
       </div>
 
+      <%= link_to 'Back', articles_path %>
+
     </div>
+
+      <div class="article-side-bar">
+        <%= render partial: "shared/side_bar", locals: {members: @members}%>
+      </div>
   </div>
 
-  <%= link_to 'Back', articles_path %>
-
-
-  <div class="article-side-bar">
-    <%= render "#サイドバーのファイル"%>
-  </div>
 
   <%# フッター %>
   <div class="footer">
