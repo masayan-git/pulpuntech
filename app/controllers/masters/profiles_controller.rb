@@ -28,7 +28,7 @@ class Masters::ProfilesController < Masters::ApplicationController
 
     respond_to do |format|
       if @masters_profile.save
-        format.html { redirect_to @masters_profile, notice: 'Profile was successfully created.' }
+        format.html { redirect_to masters_profiles_path, notice: 'Profile was successfully created.' }
         format.json { render :show, status: :created, location: @masters_profile }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class Masters::ProfilesController < Masters::ApplicationController
   def update
     respond_to do |format|
       if @masters_profile.update(masters_profile_params)
-        format.html { redirect_to @masters_profile, notice: 'Profile was successfully updated.' }
+        format.html { redirect_to [:masters,@masters_profile], notice: 'Profile was successfully updated.' }
         format.json { render :show, status: :ok, location: @masters_profile }
       else
         format.html { render :edit }
@@ -64,11 +64,11 @@ class Masters::ProfilesController < Masters::ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_masters_profile
-      @masters_profile = Masters::Profile.find(params[:id])
+      @masters_profile = Profile.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
     def masters_profile_params
-      params.fetch(:masters_profile, {})
+      params.require(:profile).permit(:image, :information, :portfolio).merge(master_id: current_master.id)
     end
 end
