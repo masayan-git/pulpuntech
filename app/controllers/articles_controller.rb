@@ -7,10 +7,6 @@ class ArticlesController < ApplicationController
   # GET /articles.json
   def index
     @articles = Article.all.page(params[:page]).per(9)
-    # @techcamp = Category.where(name: "テックキャンプ") 
-    # @job = Category.where(name: "転職") 
-    # @ocde = Category.where(name: "コード") 
-    # @techcamp = Category.where(name: "生活") 
     @num = 2
   end
   
