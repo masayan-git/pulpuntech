@@ -14,13 +14,4 @@ Category.create(
     {name:'生活'}
   ]
 )
-Article.create(
-  [
-    {
-      title: "テックキャンプについて", 
-      key_word: "",
-      master_id: 1
-    }
-  ]
-)
 
