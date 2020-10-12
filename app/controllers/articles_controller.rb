@@ -1,11 +1,17 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :update, :destroy]
   before_action :find_writer, only: :show
+  before_action :category_all, only: [:index, :show]
 
   # GET /articles
   # GET /articles.json
   def index
     @articles = Article.all.page(params[:page]).per(9)
+    # @techcamp = Category.where(name: "テックキャンプ") 
+    # @job = Category.where(name: "転職") 
+    # @ocde = Category.where(name: "コード") 
+    # @techcamp = Category.where(name: "生活") 
+    @num = 2
   end
   
   # GET /articles/1
@@ -13,21 +19,21 @@ class ArticlesController < ApplicationController
   def show
     @writer = @article.writer
   end
-
+  
   # GET /articles/new
   def new
     @article = Article.new
   end
-
+  
   # GET /articles/1/edit
   def edit
   end
-
+  
   # POST /articles
   # POST /articles.json
   def create
     @article = Article.new(article_params)
-
+    
     respond_to do |format|
       if @article.save
         format.html { redirect_to @article, notice: 'Article was successfully created.' }
@@ -38,7 +44,7 @@ class ArticlesController < ApplicationController
       end
     end
   end
-
+  
   # PATCH/PUT /articles/1
   # PATCH/PUT /articles/1.json
   def update
@@ -52,7 +58,7 @@ class ArticlesController < ApplicationController
       end
     end
   end
-
+  
   # DELETE /articles/1
   # DELETE /articles/1.json
   def destroy
@@ -62,19 +68,23 @@ class ArticlesController < ApplicationController
       format.json { head :no_content }
     end
   end
-
+  
   def search
     @articles = SearchArticlesService.search(params[:key_word])
   end
-
+  
   private
   # Use callbacks to share common setup or constraints between actions.
   def set_article
     @article = Article.find(params[:id])
   end
-
+  
   # Only allow a list of trusted parameters through.
   def article_params
     params.fetch(:article, {})
   end
+end
+
+def category_all
+  @categories = Category.all
 end

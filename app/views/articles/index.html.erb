@@ -17,26 +17,17 @@
     <div class="main-category-link-list">
       <div class="main-category-links">
         <ul>
-          <%# if @categories.present? %>
-            <%# @categories.each do |category| %>
-            <li class="main-category-link" id="category-link-1" data-num="1">
-              <%#= category.name %>
-              <span>カテゴリー１</span>
-            </li>
-            <%# end %>
-          <%# end %>
-
-          <%# 仮のため後で消す %>
-            <li class="main-category-link" id="category-link-2" data-num= "2">
-              <span>カテゴリー２</span>
-            </li>
-            <li class="main-category-link" id="category-link-3" data-num="3">
-              <span>かてごりー３</span>
-            </li>
-            <li class="main-category-link" id="category-link-4" data-num="4">
-              <span>カテゴリー４</span>
-            </li>
-          <%# /仮のため後で消す %>
+          <li class="main-category-link" id="category-link-1" data-num="1">
+            全て
+          </li>
+          <% if @categories.present? %>
+            <% @categories.each do |category| %>
+              <li class="main-category-link" id="category-link-1" data-num="<%= @num %>">
+                <%= category.name %>
+              </li>
+              <% @num += 1 %>
+            <% end %>
+          <% end %>
         </ul>
       </div>
     </div>
@@ -45,9 +36,9 @@
     <%# 記事一覧 %>
     <div class="index-article-contents-list">
       <div class="index-article-contents view-first-category" data-num="1">
-        <%# if @articles.present? %>
-          <%# @articles.each do |article| %>
-            <%# link_to article_path(article) do %>
+        <% if @articles.present? %>
+          <% @articles.each do |article| %>
+            <% link_to article_path(article) do %>
               <div class="index-article">
                 <div class="index-article-image">
                   <%#= image_tag article.image %>
@@ -59,18 +50,18 @@
                 </div>
                 <div class="index-article-content">
                   <div class="index-article-title">
-                    <%#= article.title %>
+                    <%= article.title %>
                     <span>タイトル1</span>
                   </div>
                   <div class="index-article-content-line">
-                    <%#= article.content %>
+                    <%= article.content %>
                     テキストの一部が表示されます
                   </div>
                 </div>
               </div>
-            <%# end %>
-          <%# end %>
-        <%# end %>
+            <% end %>
+          <% end %>
+        <% end %>
 
         <%# 仮のためあとで消す %>
         <%= render "shared/category_sample" %>
