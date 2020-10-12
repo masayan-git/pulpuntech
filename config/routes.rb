@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   namespace :masters do
     resources :tops, only: [:index]
     resources :articles
+    resources :profiles
+
   end
   
   
@@ -11,7 +13,7 @@ Rails.application.routes.draw do
       get 'search'
     end
   end
-  resources :members
+  resources :profiles, only: [:index, :show]
 
   devise_for :masters, controllers: {
     sessions:        'masters/sessions',
