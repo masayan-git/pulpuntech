@@ -11,11 +11,11 @@
 
   <tbody>
     <% @masters_profiles.each do |masters_profile| %>
-      <tr>
-        <td><%= link_to 'Show', masters_profile %></td>
-        <td><%= link_to 'Edit', edit_masters_profile_path(masters_profile) %></td>
-        <td><%= link_to 'Destroy', masters_profile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <p><%= masters_profile.master.name %>
+      <%= link_to 'Show', [:masters,masters_profile] %>
+      <%= link_to 'Edit', edit_masters_profile_path(masters_profile) %>
+      <%= link_to 'Destroy', [:masters,masters_profile], method: :delete, data: { confirm: '削除しますか？' } %>
+      
     <% end %>
   </tbody>
 </table>

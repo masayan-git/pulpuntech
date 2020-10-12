@@ -59,4 +59,9 @@
     <%= render "shared/viewer-footer" %>
   </div>
   <%# /フッター %>
+
+  <p>プロフィールの画面遷移テスト</p>
+  <% @profiles.each do |profile| %>
+    <%= link_to profile.master.name, profile%>
+  <%end%>
 </div>

@@ -1,3 +1,10 @@
-<p id="notice"><%= notice %></p>
-
-<%= link_to 'Back', profiles_path %>
+<p>プロフィール画面</p>
+<p>名前</p>
+<%= @profile.master.name %>
+<p>プロフィール画像</p>
+<%= image_tag @profile.image %>
+<p>プロフィール情報</p>
+<%= @profile.information %>
+<p>ポートフォリオ</p>
+<%= @profile.portfolio%>
+<%= link_to 'Back', root_path %>
