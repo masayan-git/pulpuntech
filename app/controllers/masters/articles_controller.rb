@@ -29,7 +29,6 @@ class Masters::ArticlesController < Masters::ApplicationController
   # POST /masters/articles.json
   def create
     @masters_article = Article.new(masters_article_params)
-    binding.pry
     respond_to do |format|
       if @masters_article.save
         format.html { redirect_to masters_articles_path, notice: 'Article was successfully created.' }
