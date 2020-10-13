@@ -1,27 +1,25 @@
-    <!-- <%# ブログ名 できればimageでロゴ作成%> -->
-  <div class="blog-name">
-    Pulpuntech
-  </div>
-  <!-- <%# /ブログ名 %> -->
+  <!-- <%# ブログ名 できればimageでロゴ作成%> -->
+<div class="blog-name">
+  Pulpuntech
+</div>
+<!-- <%# /ブログ名 %> -->
 
-  <!-- <リンク側> -->
-  <div class="header-right">
-    <!-- <%# カテゴリーリンク %> -->
-    <!-- カテゴリーをリンクにする -->
-    <ul class="header-category-links-list">
-      <%# <%= @categories.each do |category| %> 
-      <li class="header-category-link">カテゴリー1</li>
-      <%# <%= link_to カテゴリー一覧へ %>
-      <li class="header-category-link">カテゴリー2</li>
-      <li class="header-category-link">カテゴリー3</li>
-    </ul>
-    <!-- <%# /カテゴリーリンク %> -->
-
-    <!-- <%# 検索欄 %> -->
-    <!-- S=虫眼鏡等のimageを入れる -->
-    <div class="header-search">
-      S
-    </div>
-    <!-- <%# /検索欄 %> -->
+<!-- <%# カテゴリーリンク %> -->
+<div class="header-right">
+  <ul class="header-category-links-list">
+    <%= @categories.each do |category| %>
+      <li  class="header-category-link">
+        <%#= link_to article_path(articles.id) do %>
+        <%= category.name %>
+        <%# end %>
+      </li>
+    <% end %>
+  </ul>
+  <!-- <%# /カテゴリーリンク %> -->
+  <!-- <%# 検索欄 %> -->
+  <!-- S=虫眼鏡等のimageを入れる -->
+  <div class="header-search">
+    S
   </div>
+  <!-- <%# /検索欄 %> -->
 </div>
