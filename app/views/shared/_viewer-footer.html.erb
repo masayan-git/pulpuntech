@@ -12,13 +12,14 @@
   <!-- <%# メンバー紹介リンク %> -->
   <!-- ・member-imageは丸のimageにしたい・linkにして個々の紹介ページする？ -->
   <ul class="member-links-list">
-    <%# <%= @master.each do |master| %> 
-    <li class="member-link">
-      <%# <%= link_to masterのshowページ do %>
-      <div class="member-image">しょうじ</div><div class="member-introduce">簡単な説明</div>
-    </li>
-    <li class="member-link"><div class="member-image">ますだ</div><div class="member-introduce"></div></li>
-    <li class="member-link"><div class="member-image">みずたに</div><div class="member-introduce"></div></li>
+    <%= @profile.each do |profile| %>
+      <%= link_to profiles_path(profile.id) do %>
+      <li class="member-link">
+        <div class="member-image">アイコン</div>
+        <div class="member-introduce"><%= profile.information %></div>
+      </li>
+      <% end %>
+    <% end %>
   </ul>
   <!-- <%# /メンバー紹介リンク %> -->
   
