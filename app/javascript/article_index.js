@@ -6,7 +6,7 @@ let showContents = function() {
     category.addEventListener("click", (e)=>{
       articleContents.forEach(function(content){
         if (category.dataset.num === content.dataset.num){
-          content.setAttribute("style", "display: flex;");
+          content.setAttribute("style", "display: block;");
         }else{
           content.setAttribute("style", "display: none;");
         }
