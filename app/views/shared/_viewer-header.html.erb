@@ -7,7 +7,7 @@
 <!-- <%# カテゴリーリンク %> -->
 <div class="header-right">
   <ul class="header-category-links-list">
-    <%= @categories.each do |category| %>
+    <% @categories.each do |category| %>
       <li  class="header-category-link">
         <%#= link_to article_path(articles.id) do %>
         <%= category.name %>
