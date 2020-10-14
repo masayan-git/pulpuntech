@@ -9,6 +9,7 @@ class ArticlesController < ApplicationController
   def index
     @articles = Article.all.page(params[:page]).per(9)
     @num = 2
+    @categories = Category.all
     @profiles = Profile.all
   end
   
