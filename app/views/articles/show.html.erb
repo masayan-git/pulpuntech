@@ -9,29 +9,30 @@
   <div class="article-show">
     <div class="article-main">
       <ul class="articles-tags-list">
-        <%# <%= @tags.each do |tag| %>
-        <li class="article-tag">#tag1</li>
-        <li class="article-tag">#tag2</li>
+        <% @categories.each do |category| %>
+        <li class="article-tag">
+          <%= link_to category_path(article.id) %> 
+        </li>
       </ul>
 
       <div class="article-head">
         <div class="article-title">
-          title<%# <%= @articles.title タイトルを表示させる%>
+          <%= @article.title %>
         </div>
 
         <div class="article-head-right">
-          master<div class="article-writer">
-            <%# <%= @master.id 記事を書いたmasterを表示させる%>
+          <div class="article-writer">
+            <%= @article.master.name %>
           </div>
 
           <div class="article-date">
-          date<%# <%= @articles.update 書いた日付を表示させる%>
+           <%= @article.updated_at %>
           </div>
         </div>
       </div>
 
       <div class="article-image">
-        image<%# <%= @article.image サムネイル画像の表示%>
+        <%= image_tag @article.image %>
       </div>
 
       <div class="table-content">
@@ -39,7 +40,7 @@
       </div>
 
       <div class="article-content">
-        blog<%# <%= @articles.content ブログ本文を表示させる%>
+        <%= @article.content %>
       </div>
 
       <%= link_to 'Back', articles_path %>
