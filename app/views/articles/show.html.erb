@@ -9,9 +9,12 @@
   <div class="article-show">
     <div class="article-main">
       <ul class="articles-tags-list">
-        <% @categories.each do |category| %>
+        <% @article.categories.each do |category| %>
         <li class="article-tag">
-          <%= link_to category_path(article.id) %> 
+          <%#= link_to category_path(article.id) do %> 
+            <%= category.name %>
+          <%# end%>
+        <% end %>
         </li>
       </ul>
 
@@ -32,7 +35,7 @@
       </div>
 
       <div class="article-image">
-        <%= image_tag @article.image %>
+        <%#= image_tag @article.image %>
       </div>
 
       <div class="table-content">
@@ -48,7 +51,7 @@
     </div>
 
       <div class="article-side-bar">
-        <%= render partial: "shared/side_bar", locals: {members: @members}%>
+        <%= render partial: "shared/side_bar", locals: {profiles: @profiles}%>
       </div>
   </div>
 
