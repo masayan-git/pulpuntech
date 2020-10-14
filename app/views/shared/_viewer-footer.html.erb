@@ -1,29 +1,34 @@
-  <!-- <%# 背景 %> -->
+<%# ブログ説明 %>
   <div class="about-us">
     <div class="blog-name-footer">
-      Pulpuntech
+      <%= image_tag 'IMG_0396.PNG' ,size: '150x75'%>
     </div>
     <div class="about">
-     このブログの紹介
+     プログラミング学習スクール『TechCamp』で知り合った３人で、卒業後にチーム開発をしてみた
+     <br>的な説明。
     </div>
   </div>
-  <!-- <%# /背景 %> -->
+<%# ブログ説明ここまで %>
   
-  <!-- <%# メンバー紹介リンク %> -->
-  <!-- ・member-imageは丸のimageにしたい・linkにして個々の紹介ページする？ -->
+<%# メンバー紹介リンク %>
   <ul class="member-links-list">
-    <%# <%= @master.each do |master| %> 
+    <% @profiles.each do |profile| %> 
     <li class="member-link">
-      <%# <%= link_to masterのshowページ do %>
-      <div class="member-image">しょうじ</div><div class="member-introduce">簡単な説明</div>
+      <%= link_to profile_path(profile.id) do %>
+      <div class="member-image">
+        <%= image_tag profile.image %>
+      </div>
+      <div class="member-name">
+        <%= profile.master.name %>
+      </div>
+      <% end %>
     </li>
-    <li class="member-link"><div class="member-image">ますだ</div><div class="member-introduce"></div></li>
-    <li class="member-link"><div class="member-image">みずたに</div><div class="member-introduce"></div></li>
+    <% end %>
   </ul>
-  <!-- <%# /メンバー紹介リンク %> -->
+<%# /メンバー紹介リンクここまで %>
   
-  <!-- <%# 広告 %> -->
+<%# 広告 %>
   <div class="footer-cm">
     各広告
   </div>
-  <!-- <%# /広告 %> -->
+<%# /広告 %>
