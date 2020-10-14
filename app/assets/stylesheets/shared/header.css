@@ -11,14 +11,18 @@
 .blog-name {
   color: white;
   font-size: 30px;
+  text-decoration: none;
+  padding-left: 100px;
 }
+
 
 .header-right {
   width: 70%;
   height:100%;
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-end;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
 }
 
 .header-category-links-list {
