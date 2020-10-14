@@ -1,188 +1,41 @@
 <div class="index-article-contents" id="view-second-category" data-num="2">
-  <%# if @articles.present? %>
-    <%# @articles.each do |article| %>
-      <%#= lin_to article_path(article) do %>
-        <div class="index-article">
-          <div class="index-article-image">
-            <%#= image_tag article.image %>
-            サムネイル
-            <div class="index-article-image-category">
-              <%#= article.category.name %>
-              <span>カテゴリー名</span>
-            </div>                
-          </div>
-          <div class="index-article-content">
-            <div class="index-article-title">
-              <%#= article.title %>
-              <span>カテゴリー2の記事</span>
-            </div>
-            <div class="index-article-content-line">
-              <%#= article.content %>
-              テキストの一部が表示されます
-            </div>
-          </div>
-        </div>
-      <%# end %>
-
-      <%# 仮のためあとで消す %>
-      <div class="index-article">
-        <div class="index-article-image">
-          <%#= image_tag article.image %>
-          サムネイル
-          <div class="index-article-image-category">
-            <span>カテゴリー名</span>
-          </div>
-        </div>
-        <div class="index-article-content">
-          <div class="index-article-title">
-            <%#= article.title %>
-            カテゴリー２の記事
-          </div>
-          <div class="index-article-content-line">
-            <%#= article.content %>
-            テキストの一部が表示されます。はみ出た部分は表示しない
-          </div>
-        </div>
-      </div>
-
-      <div class="index-article">
-        <div class="index-article-image">
-          <%#= image_tag article.image %>
-          サムネイル
-          <div class="index-article-image-category">
-            <span>カテゴリー名</span>
-          </div>                
-        </div>
-        <div class="index-article-content">
-          <div class="index-article-title">
-            <%#= article.title %>
-            タイトル3
-          </div>
-          <div class="index-article-content-line">
-            <%#= article.content %>
-            テキストの一部が表示されます
-          </div>
-        </div>
-      </div>
-
-
-      <div class="index-article">
-        <div class="index-article-image">
-          <%#= image_tag article.image %>
-          サムネイル
-          <div class="index-article-image-category">
-            <span>カテゴリー名</span>
-          </div>                
-        </div>
-        <div class="index-article-content">
-          <div class="index-article-title">
-            <%#= article.title %>
-            タイトル4
-          </div>
-          <div class="index-article-content-line">
-            <%#= article.content %>
-            テキストの一部が表示されます
-          </div>
-        </div>
-      </div>            
-      <%# /仮のためあとで消す %>
-
-    <%# end %>
-  <%# end %>
+  <div class="category-indiv-guide">
+    テックキャンプ
+  </div>
+  <div class="article-indiv-box">
+    <%= render partial: "shared/article_list", locals: {datas: techcamps} %>
+  </div>
 </div>
 
 <%# 3つめ %>
 <div class="index-article-contents" id="view-third-category" data-num="3">
-  <%# if @articles.present? %>
-    <%# @articles.each do |article| %>
-      <div class="index-article">
-        <div class="index-article-image">
-          <%#= image_tag article.image %>
-          サムネイル
-          <div class="index-article-image-category">
-            <%#= article.category.name %>
-            <span>カテゴリー名</span>
-          </div>                
-        </div>
-        <div class="index-article-content">
-          <div class="index-article-title">
-            <%#= article.title %>
-            カテゴリー3の記事
-          </div>
-          <div class="index-article-content-line">
-            <%#= article.content %>
-            テキストの一部が表示されます
-          </div>
-        </div>
-      </div>
-
-      <%# 仮のためあとで消す %>
-      <div class="index-article">
-        <div class="index-article-image">
-          <%#= image_tag article.image %>
-          サムネイル
-          <div class="index-article-image-category">
-            <span>カテゴリー名</span>
-          </div>
-        </div>
-        <div class="index-article-content">
-          <div class="index-article-title">
-            <%#= article.title %>
-            カテゴリー3のきじ
-          </div>
-          <div class="index-article-content-line">
-            <%#= article.content %>
-            テキストの一部が表示されます。はみ出た部分は表示しない
-          </div>
-        </div>
-      </div>
-
-      <div class="index-article">
-        <div class="index-article-image">
-          <%#= image_tag article.image %>
-          サムネイル
-          <div class="index-article-image-category">
-            <span>カテゴリー名</span>
-          </div>                
-        </div>
-        <div class="index-article-content">
-          <div class="index-article-title">
-            <%#= article.title %>
-            タイトル3
-          </div>
-          <div class="index-article-content-line">
-            <%#= article.content %>
-            テキストの一部が表示されます
-          </div>
-        </div>
-      </div>
-
-
-      <div class="index-article">
-        <div class="index-article-image">
-          <%#= image_tag article.image %>
-          サムネイル
-          <div class="index-article-image-category">
-            <span>カテゴリー名</span>
-          </div>                
-        </div>
-        <div class="index-article-content">
-          <div class="index-article-title">
-            <%#= article.title %>
-            タイトル4
-          </div>
-          <div class="index-article-content-line">
-            <%#= article.content %>
-            テキストの一部が表示されます
-          </div>
-        </div>
-      </div>            
-      <%# /仮のためあとで消す %>
-
-    <%# end %>
-  <%# end %>
+  <div class="category-indiv-guide">
+    転職
+  </div>
+  <div class="article-indiv-box">
+    <%= render partial: "shared/article_list", locals: {datas: jobs} %>
+  </div>
 </div>
 
+<%# 4つめ %>
+<div class="index-article-contents" id="view-forth-category" data-num="4">
+  <div class="category-indiv-guide">
+    コード
+  </div>
+  <div class="article-indiv-box">
+    <%= render partial: "shared/article_list", locals: {datas: codes} %>
+  </div>
+</div>
+
+<%# 5つめ %>
+<div class="index-article-contents" id="view-fifth-category" data-num="5">
+  <div class="category-indiv-guide">
+    生活
+  </div>
+  <div class="article-indiv-box">
+    <%= render partial: "shared/article_list", locals: {datas: lives} %>
+  </div>
+</div>
 <%# /カテゴリ3 %>
 
 <%# 3つめ %>

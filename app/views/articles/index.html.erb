@@ -36,14 +36,40 @@
     <%# 記事一覧 %>
     <div class="index-article-contents-list">
       <div class="index-article-contents view-first-category" data-num="1">
-        <%= render partial: "shared/article_list", locals: {articles: @articles} %>
-
-        <%# 仮のためあとで消す %>
-        <%= render "shared/category_sample" %>
-        <%# 仮のためあとで消す %>
-
+        <div class="category-indiv-guide">
+          全て
+        </div>
+        <div class="article-indiv-box">
+          <% if @articles.present? %>
+            <% @articles.each do |article| %> 
+              <%= link_to article_path(article) do %>  
+                <div class="index-article">
+                  <div class="index-article-image">
+                    <% if article.image.present? %>
+                      <%= image_tag article.image %>                
+                    <% end %>
+                  </div>
+                  <div class="index-article-content">
+                    <div class="index-article-title">
+                      <%= article.title %>
+                      <span>タイトル1</span>
+                    </div>
+                    <div class="index-article-content-line">
+                      <%= article.content %>
+                    </div>
+                  </div>              
+                </div>
+              <% end %>
+            <% end %>
+          <% else %>
+            <div class="none-article">
+              <span>記事がありません</span>
+            </div>
+          <% end %>
+        </div>
       </div>
-      <%= render "shared/category" %>
+
+      <%= render partial: "shared/category", locals: {articles: @articles, techcamps: @techcamps, jobs: @jobs, codes: @codes, lives: @lives} %>
     </div>
     <%# /記事一覧 %>
 
@@ -62,6 +88,6 @@
 
   <p>プロフィールの画面遷移テスト</p>
   <% @profiles.each do |profile| %>
-    <%= link_to profile.master.name, profile%>
-  <%end%>
+    <%= link_to profile.master.name, profile_path %>
+  <% end %>
 </div>

@@ -7,16 +7,18 @@ class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
   def index
-    @articles = Article.all.page(params[:page]).per(9)
+    @articles = Article.all
     @num = 2
     @profiles = Profile.all
+    @techcamps = ArticleCategory.where(category_id: 1)
+    @jobs = ArticleCategory.where(category_id: 2)
+    @codes = ArticleCategory.where(category_id: 3)
+    @lives = ArticleCategory.where(category_id: 4)
   end
   
   def show
-
     @article = Article.find(params[:id])
     # @writer = @article.writer
-
   end
   
   def search
@@ -33,6 +35,7 @@ class ArticlesController < ApplicationController
   def article_params
     params.fetch(:article, {})
   end
+  
   def category_all
     @categories = Category.all
   end
