@@ -86,9 +86,20 @@ ActiveRecord::Schema.define(version: 2020_10_12_091359) do
     t.index ["master_id"], name: "index_profiles_on_master_id"
   end
 
+  create_table "profiles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "master_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["master_id"], name: "index_profiles_on_master_id"
+  end
+
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "article_categories", "articles"
   add_foreign_key "article_categories", "categories"
   add_foreign_key "articles", "masters"
+
+  add_foreign_key "members", "articles"
+  add_foreign_key "members", "masters"
+
   add_foreign_key "profiles", "masters"
 end

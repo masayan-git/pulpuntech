@@ -19,6 +19,12 @@ class ArticlesController < ApplicationController
   
   def show
     @article = Article.find(params[:id])
+    @categories = Category.all
+    @profiles = Profile.all
+    @techcamps = ArticleCategory.where(category_id: 1)
+    @jobs = ArticleCategory.where(category_id: 2)
+    @codes = ArticleCategory.where(category_id: 3)
+    @lives = ArticleCategory.where(category_id: 4)
     # @writer = @article.writer
   end
   
