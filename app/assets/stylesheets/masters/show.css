@@ -79,12 +79,12 @@
   margin-top: 20px;
 }
 
-.index-article-contents{
+/* .index-article-contents{
   display: flex;
   flex-wrap: wrap;
   position: relative;
   left: 20px;
-}
+} */
 
 #view-second-category, #view-third-category{
   display: none;
