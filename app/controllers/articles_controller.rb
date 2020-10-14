@@ -9,6 +9,7 @@ class ArticlesController < ApplicationController
   def index
     @articles = Article.all
     @num = 2
+    @categories = Category.all
     @profiles = Profile.all
     @techcamps = ArticleCategory.where(category_id: 1)
     @jobs = ArticleCategory.where(category_id: 2)
