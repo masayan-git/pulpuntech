@@ -29,7 +29,6 @@ class Masters::ArticlesController < Masters::ApplicationController
   # POST /masters/articles.json
   def create
     @masters_article = Article.new(masters_article_params)
-
     respond_to do |format|
       if @masters_article.save
         format.html { redirect_to masters_articles_path, notice: 'Article was successfully created.' }
@@ -73,7 +72,6 @@ class Masters::ArticlesController < Masters::ApplicationController
 
     # Only allow a list of trusted parameters through.
     def masters_article_params
-      # binding.pry
-      params.require(:article).permit(:title, :content,{category_ids: []}).merge(master_id: current_master.id)
+      params.require(:article).permit(:title, :content, {category_ids: []}).merge(master_id: current_master.id)
     end
 end

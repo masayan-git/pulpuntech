@@ -1,0 +1,23 @@
+.side-content{
+  padding: 10px;
+}
+
+.side-content ul{
+  list-style: none;
+}
+
+.side-members{
+  background-color: rgba(220,220,220,0.4);
+  height: 200px;
+  margin-bottom: 20px;
+}
+
+.side-table-contents{
+  background-color: rgba(220,220,220,0.4);
+  height: 200px;
+  margin-bottom: 20px;
+}
+
+.side-category-list{
+  
+}

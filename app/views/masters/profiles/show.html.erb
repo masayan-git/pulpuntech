@@ -1,0 +1,12 @@
+<p id="notice"><%= notice %></p>
+<p>名前</p>
+<%= @masters_profile.master.name %>
+<p>プロフィール画像</p>
+<%= image_tag @masters_profile.image %>
+<p>プロフィール情報</p>
+<%= @masters_profile.information %>
+<p>ポートフォリオ</p>
+<%= @masters_profile.portfolio%>
+
+<%= link_to 'Edit', edit_masters_profile_path(@masters_profile) %> |
+<%= link_to 'Back', masters_profiles_path %>

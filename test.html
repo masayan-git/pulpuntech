@@ -13,6 +13,7 @@
   </head>
   <body>
     <div id="summernote"></div>
+    <div id="summernote1"></div>
     <script>
       $('#summernote').summernote({
         placeholder: 'Hello Bootstrap 4',
@@ -20,5 +21,19 @@
         height: 100
       });
     </script>
+    <script>
+      $('#summernote1').summernote({
+        placeholder: 'Hello Bootstrap 4',
+        tabsize: 2,
+        height: 100
+      });
+    </script>
   </body>
 </html>
+
+
+      t.string         :name,           null: false
+      t.text           :infomation,     null: false
+      t.text           :portfolio,      null: false
+      t.references     :master,         null: false, foreign_key: true
+      t.references     :article,        null: false, foreign_key: true

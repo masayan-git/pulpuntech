@@ -1,0 +1,47 @@
+<%= form_with(model: [:masters,masters_profile], local: true) do |form| %>
+  <% if masters_profile.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(masters_profile.errors.count, "error") %> prohibited this masters_profile from being saved:</h2>
+
+      <ul>
+        <% masters_profile.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <p>プロフィール画像</p>
+    <%= form.file_field :image %>
+  <p>プロフィール</p>
+    <%= form.text_area :information, id:"summernote"%>
+  <P>ポートフォリオ</p>
+    <%= form.text_area :portfolio, id:"summernote1"%>
+
+  <div class="actions">
+    
+    <%= form.submit '投稿する'%>
+  </div>
+<% end %>
+
+
+<script>
+  $(document).ready(function() {
+      $('#summernote').summernote();
+  });
+  $('#summernote').summernote({
+    height: 300,                 // set editor height
+    minHeight: null,             // set minimum height of editor
+    maxHeight: null,             // set maximum height of editor
+    focus: true                  // set focus to editable area after initializing summernote
+  });
+
+  $(document).ready(function() {
+      $('#summernote1').summernote();
+  });
+  $('#summernote1').summernote({
+    height: 300,                 // set editor height
+    minHeight: null,             // set minimum height of editor
+    maxHeight: null,             // set maximum height of editor
+    focus: true                  // set focus to editable area after initializing summernote
+  });
+</script>
