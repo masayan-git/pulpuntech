@@ -1,18 +1,14 @@
 /* ここからheader */
 .header {
-  height: 100px;
+  height: 200px;
   display: flex;
-  background-color: lightgray;
+  background-color: #66CCFF;
   align-items: center;
   justify-content: space-between;
-  padding: 0 40px;
+  padding: 0 140px;
 }
 
 .blog-name {
-  color: white;
-  font-size: 30px;
-  text-decoration: none;
-  padding-left: 100px;
 }
 
 
@@ -20,8 +16,6 @@
   width: 70%;
   height:100%;
   display: flex;
-  flex-direction: column;
-  justify-content: end;
   align-items: center;
 }
 
@@ -29,7 +23,7 @@
   color: white;
   list-style: none;
   display: flex;
-  align-items: flex-start;
+  margin: 0 0 0 auto;
 }
 
 .header-category-link {
@@ -40,6 +34,6 @@
 .header-search {
   color: white;
   text-decoration: none;
-  margin: 1em 25px;
+  margin: 0 0 0 auto;
 }
 

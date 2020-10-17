@@ -5,9 +5,10 @@
 .article-main {
   width: 55vw;
   background-color: white;
-  border: 3px solid skyblue;
-  margin:3px 50px 3px 3px;
+  /* border: 3px solid skyblue; */
+  margin:100px 50px 3px 3px;
   justify-content: center;
+  position: relative;
 }
 
 .articles-tags-list {
@@ -38,22 +39,36 @@
 }
 
 .article-writer {
+  font-size: 25px;
 }
 
 .article-date{
+  font-size: 20px;
 }
 
 .article-image {
-  margin:15px;
+  margin:15px auto;
   border:2px solid skyblue;
-  width:60vw;
-  height:30vh;
+  width:600px;
+  height:315px;
+}
+.article_img {
+  max-width: 100%;
 }
 
 .table-content {
+  background: rgba(220,220,220,0.4);
+  border-radius:30px;
+  margin:30px auto;
+  padding: 30px;
+  width:500px;
+  border:2px solid skyblue;
 }
 
 .article-content {
+  margin:30px auto;
+  width:600px;
+  border:2px solid skyblue;
 }
 
 
@@ -62,5 +77,5 @@
   width: 25vw;
   border:3px solid skyblue;
   background-color: white;
-  margin: 3px 3px 3px 7px;
+  margin: 100px 3px 3px 7px;
 }

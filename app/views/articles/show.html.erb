@@ -12,7 +12,7 @@
         <% @article.categories.each do |category| %>
         <li class="article-tag">
           <%#= link_to category_path(article.id) do %> 
-            <%= category.name %>
+          #<%= category.name %>
           <%# end%>
         <% end %>
         </li>
@@ -36,10 +36,14 @@
 
       <div class="article-image">
         <%#= image_tag @article.image %>
+        <%=image_tag 'IMG_0396.PNG' ,class:"article_img"%>
       </div>
 
       <div class="table-content">
-      mokuji
+      目次
+      <br>・aaaaa
+      <br>・bbbbb
+      <br>・ccccc
       </div>
 
       <div class="article-content">

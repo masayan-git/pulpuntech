@@ -1,7 +1,7 @@
 <%# ブログ説明 %>
   <div class="about-us">
     <div class="blog-name-footer">
-      PulpunTech
+
     </div>
     <div class="about">
      プログラミング学習スクール『TechCamp』で知り合った３人で、卒業後にチーム開発をしてみた
@@ -12,6 +12,21 @@
   
 <%# メンバー紹介リンク %>
   <ul class="member-links-list">
+
+    <%# @profiles.each do |profile| %> 
+    <li class="member-link">
+      <%#= link_to profile_path(profile.id) do %>
+      <div class="member-image">
+        <img src=#<%#= profile.image %> class="icon_image">
+      </div>
+      <div class="member-name">
+        <%#= profile.master.name %>
+        name
+      </div>
+      <%# end %>
+    </li>
+    <%# end %>
+
     <% @profiles.each do |profile| %> 
     <li class="member-link">
       <%= link_to profile_path(profile.id) do %>
@@ -24,6 +39,7 @@
       <% end %>
     </li>
     <% end %>
+
   </ul>
 <%# /メンバー紹介リンクここまで %>
   
