@@ -2,10 +2,9 @@
 .header {
   height: 200px;
   display: flex;
-  background-color: #66CCFF;
   align-items: center;
   justify-content: space-between;
-  padding: 0 140px;
+  /* padding: 0 140px; */
 }
 
 .blog-name {
