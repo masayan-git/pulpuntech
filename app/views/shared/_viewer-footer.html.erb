@@ -1,7 +1,7 @@
 <%# ブログ説明 %>
   <div class="about-us">
     <div class="blog-name-footer">
-      <%= image_tag 'IMG_0396.PNG' ,size: '200x100'%>
+
     </div>
     <div class="about">
      プログラミング学習スクール『TechCamp』で知り合った３人で、卒業後にチーム開発をしてみた
@@ -12,6 +12,7 @@
   
 <%# メンバー紹介リンク %>
   <ul class="member-links-list">
+
     <%# @profiles.each do |profile| %> 
     <li class="member-link">
       <%#= link_to profile_path(profile.id) do %>
@@ -25,6 +26,20 @@
       <%# end %>
     </li>
     <%# end %>
+
+    <% @profiles.each do |profile| %> 
+    <li class="member-link">
+      <%= link_to profile_path(profile.id) do %>
+      <div class="member-image">
+        <%= image_tag profile.image %>
+      </div>
+      <div class="member-name">
+        <%= profile.master.name %>
+      </div>
+      <% end %>
+    </li>
+    <% end %>
+
   </ul>
 <%# /メンバー紹介リンクここまで %>
   
