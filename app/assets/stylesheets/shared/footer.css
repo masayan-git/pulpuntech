@@ -1,8 +1,8 @@
 /* ここからfooter */
 .footer {
-  height:200px;
+  height:350px;
   width:100%;
-  background-color: lightblue;
+  background-color: #66CCFF;
   display: flex;
 }
 
@@ -15,19 +15,18 @@
   flex-direction: column;
 }
 .blog-name-footer {
-  font-size: 25px;
-  height:20%;
-  color: white;
+
 }
 
 .about {
+  margin-top: 10px;
   height: 80%;
   width:100%;
   border:1px solid white;
 }
 
 .member-links-list {
-  border: 1px solid white;
+  /* border: 1px solid white; */
   height:90%;
   width: 40%;
   margin:10px;
@@ -43,10 +42,19 @@
 }
 
 .member-image {
-  border:1px solid white;
+
 }
 
-.member-introduce {
+.icon_image {
+  border:1px solid white;
+  width:  40px;       /* ※縦横を同値に */
+  height: 40px;       /* ※縦横を同値に */
+  border-radius: 50%;  /* 角丸半径を50%にする(=円形にする) */
+  background-position: left top;  /* 横長画像の左上を基準に表示 */
+  display: inline-block;          /* 複数の画像を横に並べたい場合 */
+}
+
+.member-name {
   margin-left: px;
 }
 
